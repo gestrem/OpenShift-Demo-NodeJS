@@ -23,7 +23,7 @@ node('nodejs') {
   stage('Checkout Source') {
     // Get Source Code from SCM (Git) as configured in the Jenkins Project
     // Next line for inline script, "checkout scm" for Jenkinsfile from GIT
-    //git url: "https://github.com/nmasse-itix/OpenShift-Demo-NodeJS.git"
+    git url: "https://github.com/gestrem/OpenShift-Demo-NodeJS"
     checkout scm
   }
 
