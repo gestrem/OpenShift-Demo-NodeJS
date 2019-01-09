@@ -1,13 +1,13 @@
 {
-  "name": "openshift-demo-nodejs-nmasse",
-  "version": "0.1.8",
+  "name": "openshift-demo-nodejs-gestrem",
+  "version": "0.0.1",
   "description": "An OpenShift Demo app running on NodeJS",
   "main": "server.js",
   "scripts": {
     "test": "./tests/run-unit-tests.sh"
   },
   "author": "Nicolas MASSE",
-  "repository": "https://github.com/nmasse-itix/OpenShift-Demo-NodeJS.git",
+  "repository": "https://github.com/gestrem/OpenShift-Demo-NodeJS",
   "license": "MIT",
   "dependencies": {
     "express": "latest"
