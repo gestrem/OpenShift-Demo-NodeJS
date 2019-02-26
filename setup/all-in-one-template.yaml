@@ -491,7 +491,7 @@ parameters:
 - description: The GIT repository to use.
   displayName: GIT Repo URL
   name: GIT_REPO
-  value: https://github.com/nmasse-itix/OpenShift-Demo-NodeJS.git
+  value: https://github.com/gestrem/OpenShift-Demo-NodeJS.git
 
 - description: The OpenShift Namespace where the NodeJS ImageStream resides.
   displayName: NodeJS ImageStream Namespace
