@@ -18,7 +18,7 @@ Using this, you can exhibit :
 
 To deploy the app and start playing with it, just use Source-to-Image :
 ```
-oc new-app nodejs~https://github.com/nmasse-itix/OpenShift-Demo-NodeJS.git --strategy=source
+oc new-app nodejs~https://github.com/gestrem/OpenShift-Demo-NodeJS.git --strategy=source
 ```
 
 To cleanup your environment, use :
