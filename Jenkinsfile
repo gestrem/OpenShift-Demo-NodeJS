@@ -59,7 +59,6 @@ node('nodejs') {
   // Build the OpenShift Image in OpenShift using the artifacts from NPM
   // Also tag the image
   stage('Build OpenShift Image') {
-
     // Trigger an OpenShift build in the dev environment
     openshiftBuild bldCfg: params.OPENSHIFT_BUILD_CONFIG, checkForTriggeredDeployments: 'false',
                    namespace: params.OPENSHIFT_BUILD_PROJECT, showBuildLogs: 'true',
@@ -101,6 +100,7 @@ node('nodejs') {
   // Blue/Green Deployment into Production
   // First step : deploy the new version but do not activate it !
   stage('Deploy to Production') {
+    sh "oc whoami"
     // Yes, this is mandatory for the next command to succeed. Don't know why...
     sh "oc project ${params.OPENSHIFT_PROD_ENVIRONMENT}"
 
