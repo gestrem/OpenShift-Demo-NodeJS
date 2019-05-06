@@ -102,7 +102,7 @@ node('nodejs') {
   stage('Deploy to Production') {
     sh "oc whoami"
     // Yes, this is mandatory for the next command to succeed. Don't know why...
-   // sh "oc project ${params.OPENSHIFT_PROD_ENVIRONMENT}"
+   sh "oc project ${params.OPENSHIFT_PROD_ENVIRONMENT}"
 
     // Extract the route target (xxx-green or xxx-blue)
     // This will be used by getCurrentTarget and getNewTarget methods
