@@ -58,3 +58,7 @@ typings/
 .env
 
 objects.json
+michelin-template2.yaml
+michelin-template.yaml
+michelin-template3.yaml
+quay-secret.yaml
