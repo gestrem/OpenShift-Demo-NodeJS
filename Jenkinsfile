@@ -93,12 +93,13 @@ node('nodejs') {
 
     // Tag the new build as "ready-for-prod"
     openshiftTag alias: 'false', destStream: params.OPENSHIFT_IMAGE_STREAM, srcTag: "${newVersion}",
-                 destinationNamespace: params.OPENSHIFT_PROD_ENVIRONMENT, namespace: params.OPENSHIFT_BUILD_PROJECT,
+                 destinationNamespace: params.OPENSHIFT_BUILD_PROJECT, namespace: params.OPENSHIFT_BUILD_PROJECT,
                  srcStream: params.OPENSHIFT_IMAGE_STREAM, destTag: 'ready-for-prod', verbose: 'false'
   }
 
   // Blue/Green Deployment into Production
   // First step : deploy the new version but do not activate it !
+  /*
   stage('Deploy to Production') {
     sh "oc whoami"
     // Yes, this is mandatory for the next command to succeed. Don't know why...
@@ -128,7 +129,7 @@ node('nodejs') {
     // Switch blue/green
     sh "oc patch -n ${params.OPENSHIFT_PROD_ENVIRONMENT} service/${params.OPENSHIFT_SERVICE} --patch '{\"spec\":{\"selector\":{\"color\":\"${newTarget}\"}}}'"
   }
-
+*/
 }
 
 // Get the current target of the OpenShift production route

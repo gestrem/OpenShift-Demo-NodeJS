@@ -1,0 +1,9 @@
+kind: ImageStream
+apiVersion: v1
+metadata:
+  name: is-michelin-quay
+  tags:
+  - from:
+      kind: DockerImage
+      name: quay.io/gestrem/michelin:latest
+    name: latest
