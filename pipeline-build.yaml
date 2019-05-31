@@ -1,0 +1,9 @@
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "nodejs-sample-pipeline"
+spec:
+  strategy:
+    jenkinsPipelineStrategy:
+      jenkinsfile: "coucou"
+    type: JenkinsPipeline

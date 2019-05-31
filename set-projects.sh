@@ -11,4 +11,8 @@ oc process -f setup/all-in-one-template.yaml TEST_ROUTE_HOSTNAME=demo-test.ge-ap
 
 oc apply -f objects.json
 
+oc adm policy add-role-to-user admin system:serviceaccount:demo-build:jenkins -n demo-test
+oc adm policy add-role-to-user admin system:serviceaccount:demo-build:jenkins -n demo-prod
+
+
 
