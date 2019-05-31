@@ -1,6 +1,6 @@
 {
   "name": "openshift-demo-nodejs-ges",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "An OpenShift Demo app running on NodeJS",
   "main": "server.js",
   "scripts": {
