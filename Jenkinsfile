@@ -99,7 +99,7 @@ node('nodejs') {
 
   // Blue/Green Deployment into Production
   // First step : deploy the new version but do not activate it !
-  
+  /*
   stage('Deploy to Production') {
     sh "oc whoami"
     // Yes, this is mandatory for the next command to succeed. Don't know why...
@@ -129,7 +129,7 @@ node('nodejs') {
     // Switch blue/green
     sh "oc patch -n ${params.OPENSHIFT_PROD_ENVIRONMENT} service/${params.OPENSHIFT_SERVICE} --patch '{\"spec\":{\"selector\":{\"color\":\"${newTarget}\"}}}'"
   }
-
+*/
 }
 
 // Get the current target of the OpenShift production route
